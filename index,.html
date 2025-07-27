@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">N</div>
+                <div class="logo-text">Nexus</div>
+            </div>
+            
+            <nav class="nav-section">
+                <div class="nav-title">My Projects</div>
+                <div class="nav-item active" data-project="platform">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                    </svg>
+                    Platform Launch
+                </div>
+                <div class="nav-item" data-project="marketing">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 2a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"/>
+                    </svg>
+                    Marketing Plan
+                </div>
+                <div class="nav-item" data-project="roadmap">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                    </svg>
+                    Roadmap
+                </div>
+                <div class="nav-item" data-project="create">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+                    </svg>
+                    Create team board
+                </div>
+            </nav>
+            
+            <div class="nav-section">
+                <div class="nav-title">My Teams</div>
+                <div class="nav-item" data-team="design">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                    </svg>
+                    Design Team
+                </div>
+                <div class="nav-item" data-team="marketing">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Marketing Team
+                </div>
+                <div class="nav-item" data-team="development">
+                    <svg class="nav-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"/>
+                    </svg>
+                    Development Team
+                </div>
+            </div>
+            
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-text">Glass mode</span>
+                <div class="theme-toggle-btn" id="theme-btn"></div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1 id="page-title">Platform Launch</h1>
+                <div class="header-actions">
+                    <button class="btn btn-secondary">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        Share
+                    </button>
+                    <button class="btn btn-primary" onclick="openModal()">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/>
+                        </svg>
+                        Add new task
+                    </button>
+                </div>
+            </div>
+            
+            <div class="nexus-board">
+                <div class="column" data-column="backlog">
+                    <div class="column-header">
+                        <div class="column-title">
+                            <span>Backlog</span>
+                            <span class="column-count">3</span>
+                        </div>
+                        <div class="column-actions">
+                            <button class="column-btn" onclick="openModal('backlog')">+</button>
+                        </div>
+                    </div>
+                    <div class="tasks" id="backlog-tasks"></div>
+                    <button class="add-task-btn" onclick="openModal('backlog')">✨ Add a card</button>
+                </div>
+                
+                <div class="column" data-column="todo">
+                    <div class="column-header">
+                        <div class="column-title">
+                            <span>To Do</span>
+                            <span class="column-count">3</span>
+                        </div>
+                        <div class="column-actions">
+                            <button class="column-btn" onclick="openModal('todo')">+</button>
+                        </div>
+                    </div>
+                    <div class="tasks" id="todo-tasks"></div>
+                    <button class="add-task-btn" onclick="openModal('todo')">🚀 Add a card</button>
+                </div>
+                
+                <div class="column" data-column="in-progress">
+                    <div class="column-header">
+                        <div class="column-title">
+                            <span>In Progress</span>
+                            <span class="column-count">3</span>
+                        </div>
+                        <div class="column-actions">
+                            <button class="column-btn" onclick="openModal('in-progress')">+</button>
+                        </div>
+                    </div>
+                    <div class="tasks" id="in-progress-tasks"></div>
+                    <button class="add-task-btn" onclick="openModal('in-progress')">⚡ Add a card</button>
+                </div>
+                
+                <div class="column" data-column="done">
+                    <div class="column-header">
+                        <div class="column-title">
+                            <span>Done</span>
+                            <span class="column-count">3</span>
+                        </div>
+                        <div class="column-actions">
+                            <button class="column-btn" onclick="openModal('done')">+</button>
+                        </div>
+                    </div>
+                    <div class="tasks" id="done-tasks"></div>
+                    <button class="add-task-btn" onclick="openModal('done')">🎉 Add a card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Create New Task</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label class="form-label">Task Title</label>
+                    <input type="text" class="form-input" id="taskTitle" placeholder="Enter an amazing task title..." required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-input form-textarea" id="taskDescription" placeholder="Describe what needs to be accomplished..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Priority</label>
+                    <select class="form-select" id="taskPriority">
+                        <option value="low">🟢 Low Priority</option>
+                        <option value="medium">🟡 Medium Priority</option>
+                        <option value="high">🔴 High Priority</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Category</label>
+                    <select class="form-select" id="taskTag">
+                        <option value="design">🎨 Design</option>
+                        <option value="development">💻 Development</option>
+                        <option value="testing">🧪 Testing</option>
+                        <option value="bug">🐛 Bug Fix</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Assignee</label>
+                    <input type="text" class="form-input" id="taskAssignee" placeholder="Who will work on this?">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <span>Made with</span>
+        <span class="footer-heart">♥</span>
+        <span>by</span>
+        <span class="footer-name">Rajeev</span>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
