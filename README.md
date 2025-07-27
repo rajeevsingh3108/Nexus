@@ -2,6 +2,7 @@
 
 Nexus is a modern, visually stunning web-based task management application designed for teams and projects. It features a glassmorphism UI, drag-and-drop Kanban board, project/team switching, and interactive effects for an engaging user experience.
 
+
 ## Features
 
 - **Kanban Board (Nexus Board):** Organize tasks into Backlog, To Do, In Progress, and Done columns.
