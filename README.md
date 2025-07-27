@@ -20,7 +20,7 @@ Nexus is a modern, visually stunning web-based task management application desig
 
 ## File Structure
 
-- `index,.html` — Main HTML file for the app UI.
+- `index.html` — Main HTML file for the app UI.
 - `styles.css` — Custom styles for glassmorphism, layout, and responsiveness.
 - `script.js` — Handles all app logic, drag-and-drop, modal, theme, and interactivity.
 
